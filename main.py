@@ -55,17 +55,27 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
+  # Basic import with auto-detection (recommended)
   uv run main.py exported_timeline.otio
-  uv run main.py /path/to/timeline.otio
+  
+  # Import with custom timeline name
   uv run main.py --name "My Timeline" timeline.otio
-  uv run main.py  # Interactive mode
+  
+  # Manual media path specification
+  uv run main.py timeline.otio --clips-path "/path/to/media"
+  
+  # Force source clips import (usually not needed due to auto-detection)
+  uv run main.py timeline.otio --import-clips
+  
+  # Interactive mode
+  uv run main.py
         """
     )
     
     parser.add_argument('input', nargs='?', help='Input OTIO file path (optional, will prompt if not provided)')
     parser.add_argument('--name', '-n', help='Timeline name (optional, uses filename if not provided)')
     parser.add_argument('--import-clips', action='store_true', 
-                       help='Import source clips into media pool')
+                       help='Force import of source clips into media pool (auto-detected by default)')
     parser.add_argument('--clips-path', help='Filesystem path to search for source clips')
     
     args = parser.parse_args()
@@ -91,10 +101,14 @@ Examples:
     print("Starting OTIO import...")
     print()
     
+    # Use auto-detection if user didn't specify --import-clips
+    # This helps solve the offline media issue by automatically detecting when clips are needed
+    import_clips_setting = True if args.import_clips else None
+    
     success = import_otio_timeline(
         otio_file_path=otio_file_path,
         timeline_name=args.name,
-        import_source_clips=args.import_clips,
+        import_source_clips=import_clips_setting,
         source_clips_path=args.clips_path or "",
         source_clips_folders=None
     )

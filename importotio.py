@@ -8,9 +8,10 @@ No hardcoded paths - designed to be used by datapipeline.py or standalone.
 
 import sys
 import os
+import json
 import argparse
 from pathlib import Path
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, Set
 
 
 def get_unique_timeline_name(project, base_timeline_name: str) -> str:
@@ -89,22 +90,88 @@ def display_timeline_info(timeline) -> None:
         print(f"Warning: Could not get complete timeline information: {e}")
 
 
+def analyze_otio_media_paths(otio_file_path: str) -> Dict[str, Any]:
+    """
+    Analyze an OTIO file to extract media paths and provide import recommendations.
+    
+    Args:
+        otio_file_path: Path to the OTIO file
+        
+    Returns:
+        Dictionary with analysis results and recommendations
+    """
+    try:
+        with open(otio_file_path, 'r', encoding='utf-8') as f:
+            otio_data = json.load(f)
+        
+        media_paths = set()
+        media_dirs = set()
+        
+        def extract_media_references(obj):
+            """Recursively extract media references from OTIO structure."""
+            if isinstance(obj, dict):
+                if "target_url" in obj:
+                    target_url = obj["target_url"]
+                    if target_url and isinstance(target_url, str):
+                        media_paths.add(target_url)
+                        media_dir = Path(target_url).parent
+                        media_dirs.add(str(media_dir))
+                
+                for value in obj.values():
+                    extract_media_references(value)
+            elif isinstance(obj, list):
+                for item in obj:
+                    extract_media_references(item)
+        
+        extract_media_references(otio_data)
+        
+        # Find the most common media directory
+        common_dir = None
+        if media_dirs:
+            # For now, just use the first one (could be enhanced to find most common)
+            common_dir = list(media_dirs)[0]
+        
+        analysis = {
+            "total_media_files": len(media_paths),
+            "media_paths": sorted(list(media_paths)),
+            "media_directories": sorted(list(media_dirs)),
+            "recommended_source_path": common_dir,
+            "requires_source_clips": len(media_paths) > 0
+        }
+        
+        return analysis
+        
+    except Exception as e:
+        print(f"Warning: Could not analyze OTIO file: {e}")
+        return {
+            "total_media_files": 0,
+            "media_paths": [],
+            "media_directories": [],
+            "recommended_source_path": None,
+            "requires_source_clips": False,
+            "analysis_error": str(e)
+        }
+
+
 def import_otio_timeline(
     otio_file_path: str, 
     timeline_name: Optional[str] = None,
-    import_source_clips: bool = False,
+    import_source_clips: bool = None,
     source_clips_path: str = "",
-    source_clips_folders: Optional[list] = None
+    source_clips_folders: Optional[list] = None,
+    auto_detect_media: bool = True
 ) -> bool:
     """
     Import an OTIO timeline file into DaVinci Resolve.
+    Enhanced with automatic media path detection to solve offline media issues.
     
     Args:
         otio_file_path: Path to the OTIO file to import
         timeline_name: Name for the imported timeline (optional, uses filename if not provided)
-        import_source_clips: Whether to import source clips into media pool
-        source_clips_path: Filesystem path to search for source clips
+        import_source_clips: Whether to import source clips (None=auto-detect, True/False=override)
+        source_clips_path: Filesystem path to search for source clips (auto-detected if empty)
         source_clips_folders: Media Pool folder objects to search for clips
+        auto_detect_media: Whether to automatically analyze OTIO for media paths
         
     Returns:
         True if successful, False otherwise
@@ -155,6 +222,49 @@ def import_otio_timeline(
         
         print(f"[OK] OTIO file: {otio_file}")
         
+        # Analyze OTIO file for media paths if auto-detection is enabled
+        analysis = {"requires_source_clips": False, "recommended_source_path": None}
+        if auto_detect_media:
+            print("Analyzing OTIO file for media references...")
+            analysis = analyze_otio_media_paths(str(otio_file))
+            
+            if "analysis_error" in analysis:
+                print(f"[WARNING] OTIO analysis failed: {analysis['analysis_error']}")
+            else:
+                print(f"[OK] Found {analysis['total_media_files']} media references")
+                if analysis['media_directories']:
+                    print("Media directories detected:")
+                    for media_dir in analysis['media_directories']:
+                        exists = "✓ EXISTS" if Path(media_dir).exists() else "✗ MISSING"
+                        print(f"  {exists}: {media_dir}")
+                    
+                    if analysis['recommended_source_path']:
+                        print(f"[AUTO-DETECT] Recommended source path: {analysis['recommended_source_path']}")
+        
+        # Determine final import settings with enhanced defaults
+        final_import_clips = import_source_clips
+        final_source_path = source_clips_path
+        
+        # Auto-detect import_source_clips if not explicitly set
+        if import_source_clips is None:
+            final_import_clips = analysis.get('requires_source_clips', True)  # Default to True for safety
+            if final_import_clips:
+                print("[AUTO-DETECT] Enabling source clips import (media references found)")
+            else:
+                print("[AUTO-DETECT] Disabling source clips import (no media references found)")
+        else:
+            final_import_clips = import_source_clips
+            print(f"[MANUAL] Source clips import: {final_import_clips}")
+        
+        # Auto-detect source clips path if not provided
+        if not source_clips_path and auto_detect_media and analysis.get('recommended_source_path'):
+            final_source_path = analysis['recommended_source_path']
+            print(f"[AUTO-DETECT] Using detected source path: {final_source_path}")
+        elif source_clips_path:
+            print(f"[MANUAL] Using provided source path: {final_source_path}")
+        else:
+            print("[WARNING] No source clips path specified - media may be offline")
+        
         # Generate timeline name
         if timeline_name is None:
             base_timeline_name = otio_file.stem
@@ -166,11 +276,11 @@ def import_otio_timeline(
         print(f"[OK] Timeline name: {final_timeline_name}")
         print()
         
-        # Set up import options
+        # Set up enhanced import options
         import_options = {
             "timelineName": final_timeline_name,
-            "importSourceClips": import_source_clips,
-            "sourceClipsPath": source_clips_path,
+            "importSourceClips": final_import_clips,
+            "sourceClipsPath": final_source_path,
             "sourceClipsFolders": source_clips_folders or []
         }
         
@@ -183,17 +293,22 @@ def import_otio_timeline(
         print("Importing OTIO timeline...")
         timeline = media_pool.ImportTimelineFromFile(str(otio_file), import_options)
         
-        # If import fails, try with importSourceClips enabled as fallback
-        if not timeline and not import_source_clips:
-            print("Initial import failed. Trying with source clips import enabled...")
-            fallback_options = import_options.copy()
-            fallback_options["importSourceClips"] = True
-            timeline = media_pool.ImportTimelineFromFile(str(otio_file), fallback_options)
-            
-            if timeline:
-                print("[OK] Fallback import method succeeded")
-            else:
-                print("[ERROR] All import methods failed")
+        # If import fails, try enhanced fallback methods
+        if not timeline:
+            if not final_import_clips and analysis.get('requires_source_clips', False):
+                print("Initial import failed. Trying with source clips import enabled...")
+                fallback_options = import_options.copy()
+                fallback_options["importSourceClips"] = True
+                if analysis.get('recommended_source_path') and not final_source_path:
+                    fallback_options["sourceClipsPath"] = analysis['recommended_source_path']
+                    print(f"[FALLBACK] Also trying detected source path: {analysis['recommended_source_path']}")
+                
+                timeline = media_pool.ImportTimelineFromFile(str(otio_file), fallback_options)
+                
+                if timeline:
+                    print("[OK] Enhanced fallback import succeeded")
+                else:
+                    print("[ERROR] Enhanced fallback import also failed")
         
         if timeline:
             print(f"[OK] Timeline '{timeline.GetName()}' imported successfully!")
@@ -211,19 +326,34 @@ def import_otio_timeline(
         else:
             print("ERROR: Failed to import timeline from OTIO file!")
             print()
+            
+            # Enhanced error reporting with media analysis
+            if analysis.get('total_media_files', 0) > 0:
+                print("=== MEDIA FILE ANALYSIS ===")
+                print(f"Media files referenced in OTIO: {analysis['total_media_files']}")
+                print("Media file status:")
+                for i, media_path in enumerate(analysis.get('media_paths', []), 1):
+                    exists = Path(media_path).exists()
+                    status = "✓ EXISTS" if exists else "✗ MISSING"
+                    print(f"  {i}. {status}: {media_path}")
+                print()
+            
             print("Possible issues:")
             print("- OTIO file format is not compatible with this version of DaVinci Resolve")
             print(f"- Timeline name '{final_timeline_name}' conflicts with existing timeline")
-            print("- Media referenced in OTIO file is not found in the project")
+            print("- Media referenced in OTIO file is not found in the project or at specified paths")
             print("- OTIO file contains unsupported elements or codec")
             print("- OTIO file may be corrupted or incorrectly formatted")
             print("- Check DaVinci Resolve console for more detailed error messages")
             print()
-            print("Troubleshooting:")
-            print("- Ensure the original media is imported into your media pool")
-            print("- Check that media file paths in the OTIO match your project structure")
-            print("- Try importing the source media first, then retry the timeline import")
-            print("- Verify the OTIO file was generated correctly by json2otio.py")
+            print("Enhanced troubleshooting:")
+            print("- Ensure the media files exist at the paths shown above")
+            print("- Import the media files into your DaVinci Resolve Media Pool first")
+            print("- Check that media file paths in the OTIO are accessible from your system")
+            print("- If media files moved, update their location in your project")
+            if analysis.get('recommended_source_path'):
+                print(f"- Try manually specifying source clips path: {analysis['recommended_source_path']}")
+            print("- Verify the OTIO file was generated correctly")
             
             return False
             

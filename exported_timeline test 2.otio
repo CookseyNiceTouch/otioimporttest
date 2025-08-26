@@ -1,0 +1,2300 @@
+{
+    "OTIO_SCHEMA": "Timeline.1",
+    "metadata": {
+        "Resolve_OTIO": {
+            "Resolve OTIO Meta Version": "1.0"
+        }
+    },
+    "name": "",
+    "global_start_time": {
+        "OTIO_SCHEMA": "RationalTime.1",
+        "rate": 25.0,
+        "value": 90000.0
+    },
+    "tracks": {
+        "OTIO_SCHEMA": "Stack.1",
+        "metadata": {},
+        "name": "",
+        "source_range": null,
+        "effects": [],
+        "markers": [],
+        "enabled": true,
+        "children": [
+            {
+                "OTIO_SCHEMA": "Track.1",
+                "metadata": {
+                    "Resolve_OTIO": {
+                        "Locked": false
+                    }
+                },
+                "name": "Video Track",
+                "source_range": null,
+                "effects": [],
+                "markers": [],
+                "enabled": true,
+                "children": [
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 216.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 186556.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-294": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "706": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-294": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "706": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 224.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 186804.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-542": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "458": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-542": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "458": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 378.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 193106.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-5844": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "-6844": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-5844": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "-6844": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 403.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 193500.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-6238": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "-7238": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-6238": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "-7238": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 304.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 198452.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-11190": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "-12190": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-11190": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "-12190": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 230.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 198771.99999999998
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-11510": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "-12510": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-11510": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "-12510": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 619.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 201711.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-14449": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "-15449": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-14449": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "-15449": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 532.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 205266.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-18004": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "-19004": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-18004": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "-19004": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {}
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 1330.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 208202.0
+                            }
+                        },
+                        "effects": [
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Transform",
+                                        "Enabled": true,
+                                        "Name": "Transform",
+                                        "Parameters": [],
+                                        "Type": 2
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Cropping",
+                                        "Enabled": true,
+                                        "Name": "Cropping",
+                                        "Parameters": [],
+                                        "Type": 3
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Dynamic Zoom",
+                                        "Enabled": false,
+                                        "Name": "Dynamic Zoom",
+                                        "Parameters": [
+                                            {
+                                                "Default Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Key Frames": {
+                                                    "-20940": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    },
+                                                    "-21940": {
+                                                        "Value": [
+                                                            0.0,
+                                                            0.0
+                                                        ],
+                                                        "Variant Type": "POINTF"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomCenter",
+                                                "Parameter Value": [
+                                                    0.0,
+                                                    0.0
+                                                ],
+                                                "Variant Type": "POINTF"
+                                            },
+                                            {
+                                                "Default Parameter Value": 1.0,
+                                                "Key Frames": {
+                                                    "-20940": {
+                                                        "Value": 1.0,
+                                                        "Variant Type": "Double"
+                                                    },
+                                                    "-21940": {
+                                                        "Value": 0.8,
+                                                        "Variant Type": "Double"
+                                                    }
+                                                },
+                                                "Parameter ID": "dynamicZoomScale",
+                                                "Parameter Value": 1.0,
+                                                "Variant Type": "Double",
+                                                "maxValue": 100.0,
+                                                "minValue": 0.01
+                                            }
+                                        ],
+                                        "Type": 59
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Composite",
+                                        "Enabled": true,
+                                        "Name": "Composite",
+                                        "Parameters": [],
+                                        "Type": 1
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Lens Correction",
+                                        "Enabled": true,
+                                        "Name": "Lens Correction",
+                                        "Parameters": [],
+                                        "Type": 43
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Retime and Scaling",
+                                        "Enabled": true,
+                                        "Name": "Retime and Scaling",
+                                        "Parameters": [],
+                                        "Type": 22
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            },
+                            {
+                                "OTIO_SCHEMA": "Effect.1",
+                                "metadata": {
+                                    "Resolve_OTIO": {
+                                        "Effect Name": "Video Faders",
+                                        "Enabled": true,
+                                        "Name": "Video Faders",
+                                        "Parameters": [],
+                                        "Type": 36
+                                    }
+                                },
+                                "name": "",
+                                "effect_name": "Resolve Effect"
+                            }
+                        ],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    }
+                ],
+                "kind": "Video"
+            },
+            {
+                "OTIO_SCHEMA": "Track.1",
+                "metadata": {
+                    "Resolve_OTIO": {
+                        "Audio Type": "Stereo",
+                        "Locked": false,
+                        "SoloOn": false
+                    }
+                },
+                "name": "Audio 1",
+                "source_range": null,
+                "effects": [],
+                "markers": [],
+                "enabled": true,
+                "children": [
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 216.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 186556.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 224.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 186804.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 378.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 193106.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 403.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 193500.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 304.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 198452.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 230.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 198771.99999999998
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 619.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 201711.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 532.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 205266.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.2",
+                        "metadata": {
+                            "Resolve_OTIO": {
+                                "Channels": [
+                                    {
+                                        "Source Channel ID": 0,
+                                        "Source Track ID": 0
+                                    },
+                                    {
+                                        "Source Channel ID": 1,
+                                        "Source Track ID": 0
+                                    }
+                                ]
+                            }
+                        },
+                        "name": "20250509_MTC_2206.MP4",
+                        "source_range": {
+                            "OTIO_SCHEMA": "TimeRange.1",
+                            "duration": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 1330.0
+                            },
+                            "start_time": {
+                                "OTIO_SCHEMA": "RationalTime.1",
+                                "rate": 25.0,
+                                "value": 208202.0
+                            }
+                        },
+                        "effects": [],
+                        "markers": [],
+                        "enabled": true,
+                        "media_references": {
+                            "DEFAULT_MEDIA": {
+                                "OTIO_SCHEMA": "ExternalReference.1",
+                                "metadata": {},
+                                "name": "20250509_MTC_2206.MP4",
+                                "available_range": {
+                                    "OTIO_SCHEMA": "TimeRange.1",
+                                    "duration": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 26616.0
+                                    },
+                                    "start_time": {
+                                        "OTIO_SCHEMA": "RationalTime.1",
+                                        "rate": 25.0,
+                                        "value": 186262.0
+                                    }
+                                },
+                                "available_image_bounds": null,
+                                "target_url": "D:\\NextCloud\\Nice Touch\\Projects\\Leaunch Videos\\Rushes\\Camera\\20250509_MTC_2206.MP4"
+                            }
+                        },
+                        "active_media_reference_key": "DEFAULT_MEDIA"
+                    }
+                ],
+                "kind": "Audio"
+            }
+        ]
+    }
+}
